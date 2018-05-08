@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Edytor dla pisarzy</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark">
+             <a class="navbar-brand" href="#">Texteditor</a>
+             <!-- div class="float-right">
+                 <button type="button" class="btn btn-primary">Zapisz zmiany</button>
+                 <span class="badge badge-primary">Ostatni zapis 05.05.2018 09:25</span>
+                 <button type="button" class="btn btn-danger">Od nowa</button>
+             </div> -->
+            <div class="float-right">
+                <div class="btn-group">
+                    <button class="btn btn-secondary" disabled>
+                        <!-- Wielkość tekstu -->
+                        <i class="fas fa-arrows-alt-v"></i>
+                        <i class="fas fa-font"></i>
+                    </button>
+
+                    <button 
+                        class="btn btn-info js--change-font-size" 
+                        data-change="-5">
+                        -5
+                    </button>
+
+                    <button 
+                        class="btn btn-info js--change-font-size" 
+                        data-change="-1">
+                        -1
+                    </button> 
+
+                    <button id="reset-font-size" class="btn btn-outline-secondary">
+                        0
+                    </button>
+
+                    <button 
+                        class="btn btn-warning js--change-font-size"
+                        data-change="1">
+                        +1
+                    </button>
+
+                    <button 
+                        class="btn btn-warning js--change-font-size"
+                        data-change="5">
+                        +5
+                    </button>
+                </div>
+
+                <button id="full-screen-btn" class="btn  btn-success">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                </button>
+                <div class="btn-group">
+                    <button 
+                        id="save-btn" 
+                        type="button" 
+                        class="btn btn-primary js--tooltip"
+                        data-toggle="tooltip" 
+                        data-placement="bottom" 
+                        title="Zapisz do pamięci">
+                        <i class="fas fa-save"></i>
+                    </button>
+                    <button 
+                        id="download-btn" 
+                        type="button" 
+                        class="btn btn-primary"
+                        data-toggle="tooltip" 
+                        data-placement="bottom" 
+                        title="Pobierz formie txt">
+                        <i class="fas fa-download"></i>
+                    </button>
+                </div>    
+                
+                <button 
+                    id="reset-btn" 
+                    type="button" 
+                    class="btn btn-danger">
+                    <i class="fas fa-undo"></i>
+                </button>
+            </div>
+                
+
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <textarea 
+                            id="editor" 
+                            class="form-control" 
+                            style="font-size: 16px;"></textarea>
+                    </div>
+                    <hr>
+                    <div class="alert alert-secondary text-center" role="alert">
+                        Ilość znaków:
+                         <strong id="stats-char-count">0</strong> | Ilość słów 
+                         <strong id="stats-word-count">0</strong> | 
+                         <span
+                            id="save-tooltip"
+                            data-toggle="tooltip" 
+                            data-placement="right" 
+                            data-trigger="manual"
+                            title="Zapisano"> 
+                             Ostatni zapis 
+                             <strong id="save-date"
+                                - 
+                            </strong>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="js/jquery-3.3.1.slim.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/screenfull.min.js"></script>
+        <script src="js/main.js"></script>
+
+   
+
+        <!-- <script>
+            $(function () {
+              $('[data-toggle="tooltip"]').tooltip()
+            })
+        </script> -->
+    </body>
+</html>
